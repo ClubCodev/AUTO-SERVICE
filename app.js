@@ -24,7 +24,7 @@ document.querySelectorAll('.btn-seleccionar').forEach(boton => {
         zonaPersonalizacion.classList.remove('oculto');
 
         // Petición GET al backend
-        fetch(`https://proyecto-auto-service.onrender.com/modificadores/${productoActualSeleccionado.idDb}`)
+        fetch(`https://auto-service-ap1g.onrender.com/modificadores/${productoActualSeleccionado.idDb}`)
         .then(res => res.json())
         .then(data => {
             contenedorMods.innerHTML = ''; // Limpiar mensaje
@@ -128,7 +128,7 @@ document.getElementById('btn-pagar').addEventListener('click', () => {
         detalle_pedido: ticketPedido
     };
 
-    fetch('https://proyecto-auto-service.onrender.com/comprar', {
+    fetch('https://auto-service-ap1g.onrender.com/comprar', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
